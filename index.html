@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Sci-fi kvíz o vývoji výstupních periferií.">
+  <title>Hardware Protocol | Výstupní periferie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#">
+        <span class="brand-icon">H<span>_</span></span>
+        <span>HARDWARE<span class="brand-muted"> PROTOCOL</span></span>
+      </a>
+      <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+      <span class="header-label">IT // CLASSROOM</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span> HARDWARE DATABASE / 001</div>
+      <h1>VÝSTUPNÍ<br><span>PERIFERIE</span><i>.</i></h1>
+      <p class="intro-text">
+        Spusťte znalostní test. Projděte tři úrovně a ověřte,
+        jak dobře znáte vývoj zařízení, která předávají informace uživateli.
+      </p>
+      <div class="intro-meta">
+        <span><b>15</b> TESTOVACÍCH OTÁZEK</span>
+        <span>///</span>
+        <span><b>03</b> SKUPINY</span>
+        <span>///</span>
+        <span>HARDWARE & IT</span>
+      </div>
+    </section>
+
+    <section class="quiz-layout">
+      <aside class="sidebar">
+        <div class="panel score-card">
+          <div class="panel-heading"><span>01 // SCORE</span><span class="live-label">LIVE</span></div>
+          <div class="score-line"><strong id="score">0</strong><span>BODY</span></div>
+          <div class="score-track"><div id="score-fill"></div></div>
+          <p id="score-caption">Čeká se na první odpověď...</p>
+          <div class="score-divider"></div>
+          <div class="mini-stats">
+            <div><span>SPRÁVNĚ</span><b id="correct-count">0</b></div>
+            <div><span>CHYBNĚ</span><b id="wrong-count">0</b></div>
+          </div>
+        </div>
+
+        <div class="panel question-nav">
+          <div class="panel-heading"><span>02 // NAVIGACE</span><span id="nav-count">0 / 15</span></div>
+          <div id="question-list" class="question-list"></div>
+        </div>
+
+        <div class="panel group-card">
+          <div class="panel-heading"><span>03 // AKTUÁLNÍ ÚROVEŇ</span></div>
+          <div id="group-name">SEKTOR 01</div>
+          <p id="group-description">Základy a zobrazovací zařízení</p>
+          <div class="group-progress"><div id="group-fill"></div></div>
+          <span id="group-count">0 / 5 DOKONČENO</span>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <article id="question-card" class="panel question-card">
+          <div class="question-top">
+            <span id="question-category" class="category-tag">ZÁKLADY</span>
+            <span id="question-number" class="question-number">QUESTION 01 / 15</span>
+          </div>
+
+          <div class="question-content">
+            <div class="question-symbol"><span id="question-symbol">01</span></div>
+            <div class="question-type" id="question-type">KNOWLEDGE CHECK</div>
+            <h2 id="question-title">Načítání otázky...</h2>
+            <p id="question-description">Vyberte odpověď, která je podle vás správná.</p>
+          </div>
+
+          <div id="options" class="options"></div>
+
+          <div id="answer-panel" class="answer-panel" hidden>
+            <div class="answer-result" id="answer-result"></div>
+            <p id="answer-explanation"></p>
+          </div>
+
+          <div class="question-bottom">
+            <span id="question-status">● AWAITING INPUT</span>
+            <span>HARDWARE PROTOCOL v1.0</span>
+          </div>
+        </article>
+
+        <div class="bottom-navigation">
+          <button id="previous-button" class="nav-button secondary" disabled>← PŘEDCHOZÍ</button>
+          <span id="position-label">01 <i>/</i> 15</span>
+          <button id="next-button" class="nav-button primary" disabled>DALŠÍ OTÁZKA →</button>
+        </div>
+
+        <section id="finish-panel" class="panel finish-panel" hidden>
+          <div class="finish-icon">✓</div>
+          <div class="eyebrow">TEST COMPLETE // 100%</div>
+          <h2 id="finish-title">MISE DOKONČENA.</h2>
+          <p id="finish-text"></p>
+          <div class="finish-stats">
+            <div><strong id="final-score">0</strong><span>CELKOVÉ BODY</span></div>
+            <div><strong id="final-correct">0 / 15</strong><span>SPRÁVNÉ ODPOVĚDI</span></div>
+            <div><strong id="final-percent">0 %</strong><span>ÚSPĚŠNOST</span></div>
+          </div>
+          <div id="group-results" class="group-results"></div>
+          <button id="restart-button" class="nav-button primary">RESTARTOVAT TEST ↻</button>
+        </section>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>HARDWARE PROTOCOL <i>//</i> EDUCATION SYSTEM</span>
+      <span>CONNECTION SECURE <b>●</b></span>
+    </footer>
+  </main>
+</body>
+</html>
